@@ -1,5 +1,0 @@
-#!/bin/bash
-datadir=/autoit.data/getip
-
-. variables.cfg
-vcadmin="$vcadmin" vcpass="$vcpass" vcserver="$vcserver" iplistcsv="$datadir/tmp/iplist.csv" pwsh -Command 'Connect-VIServer -server $env:vcserver -Force -WarningAction 0 -Username $env:vcadmin -Password $env:vcpass; get-vm |get-annotation -customattribute *-ip-* |select Name,AnnotatedEntity,value |export-csv $env:iplistcsv'
