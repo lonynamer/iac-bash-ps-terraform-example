@@ -1,0 +1,2 @@
+#!/bin/bash
+sshpass -p $1 ssh -o StrictHostKeyChecking=no $2 "powershell Add-DhcpServerv4Reservation -ScopeId $3 -IPAddress $4 -ClientId $5 -Name $6 -Description $6" || sshpass -p $1 ssh -o StrictHostKeyChecking=no $2 "powershell Add-DhcpServerv4Reservation -ScopeId $3 -IPAddress $4 -ClientId $5 -Name $6 -Description $6" || sshpass -p $1 ssh -o StrictHostKeyChecking=no $2 "powershell Add-DhcpServerv4Reservation -ScopeId $3 -IPAddress $4 -ClientId $5 -Name $6 -Description $6" || exit 1
